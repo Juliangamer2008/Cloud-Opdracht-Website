@@ -1,0 +1,96 @@
+/* Reset & Basis */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f111a;
+    color: #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #6366f1; /* Neon paars/blauw */
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #94a3b8;
+}
+
+/* Grid Layout */
+.grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* De Nummer 1 krijgt een grotere plek */
+.rank-1 {
+    grid-column: 1 / -1;
+    border-left: 5px solid #eab308 !important; /* Goud randje */
+    background: linear-gradient(135deg, #1e1b4b 0%, #111827 100%) !important;
+}
+
+/* Game Cards */
+.game-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    border-color: #6366f1;
+}
+
+.rank {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6366f1;
+    background: rgba(99, 102, 241, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+}
+
+.rank-1 .rank {
+    color: #eab308;
+    background: rgba(234, 179, 8, 0.1);
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+    padding-right: 3rem; /* Ruimte voor de rank */
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    color: #475569;
+    font-size: 0.9rem;
+}
